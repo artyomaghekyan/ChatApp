@@ -1,0 +1,8 @@
+{% extends 'base/main.html'%}
+{% block content %}
+{% for room in rooms %}
+<div class="flex items-start shadow-lg p-10 m-10 bg-yellow-500 text-white rounded font-serif">
+    <br><a class="text-center" href="{% url 'chatroom' room.slug%}">{{room}}</a>
+</div>
+{% endfor %}
+{% endblock content%}
